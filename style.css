@@ -250,11 +250,11 @@ li {
 }
 @media screen and (max-width: 767.98px) {
   .landing-text{
-    font-size: 30px;
+    font-size: 27px;
     max-width: 100%;
   }
   .landing-work{
-    font-size: 25px;
+    font-size: 20px;
   }
   .nav-list{
     flex-direction: column;
