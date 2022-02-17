@@ -123,7 +123,7 @@ li {
   transform: translate(-50%, -50%);
   color: var(--white-color);
   font-family: var(--main-font);
-  font-size: 10rem;
+  font-size: 7rem;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -144,15 +144,15 @@ li {
 }
 .project-item {
   position: relative;
-  margin: 50px 0;
+  margin: 30px 0;
   padding: 20px;
 }
 .project-name {
   font-family: var(--main-font);
   font-size: 35px;
-  position: absolute;
+  /* position: absolute;
   top: -50px;
-  left: 0;
+  left: 0; */
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -161,8 +161,11 @@ li {
 .project-item img {
   width: 800px;
   height: 400px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 8px;
+}
+.project3 img {
+  object-fit: contain;
 }
 .project2,
 .project4,
@@ -181,7 +184,7 @@ li {
   position: fixed;
   z-index: 1000;
 }
-.linkproject{
+.linkproject {
   font-size: 30px;
   font-family: var(--main-font);
   color: var(--white-color);
@@ -193,18 +196,30 @@ li {
   color: var(--white-color);
   text-align: center;
   margin-bottom: 30px;
+  display: flex;
+
+  padding: 0 30px;
+  justify-content: space-between;
 }
 .about img {
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   margin: 40px auto;
   border-radius: 8px;
 }
+.about-item {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+
 .about-name {
   font-family: var(--main-font);
   font-size: 35px;
-  color: transparent;
+  color: white;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, #ffe838, #fd57bf);
@@ -220,7 +235,7 @@ li {
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, #ffe838, #fd57bf);
   margin-bottom: 20px;
-  font-family: var(--main-font);
+  font-family: "Poppins", sans-serif;
 }
 .about-skill p {
   font-family: "Poppins", sans-serif;
@@ -234,44 +249,49 @@ li {
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, #ffe838, #fd57bf);
+  
 }
-
 
 /* reposive */
 
 @media screen and (max-width: 1023.98px) {
-  .landing-text{
-    font-size: 60px;
+  .landing-text {
+    font-size: 50px;
     max-width: 100%;
   }
-  .landing-work{
+  .landing-work {
     font-size: 30px;
+  }
+  .about{
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 767.98px) {
-  .landing-text{
-    font-size: 27px;
+  .landing-text {
+    font-size: 25px;
     max-width: 100%;
   }
-  .landing-work{
+  .landing-work {
     font-size: 20px;
   }
-  .nav-list{
+  .nav-list {
     flex-direction: column;
-    
   }
-  .about{
+  .about {
     padding: 20px;
   }
-  .about img{
+  .about img {
     width: 400px;
     height: 500px;
   }
-  .project-name{
+  .project-name {
     font-size: 30px;
-    
   }
-  .linkproject{
+  .linkproject {
     font-size: 25px;
+  }
+  .project-item img{
+    object-fit: cover;
+    height: auto;
   }
 }
