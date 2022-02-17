@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
-
 /* global */
 
 *,
@@ -11,8 +9,7 @@
 }
 
 :root {
-  --main-font: "Dancing Script", cursive;
-  --secondary-font: "Herr Von Muellerhoff", cursive;
+  --main-font: "Poppins", sans-serif;
   --gb-nav-color: #16162d;
   --main-font-color-dark: #252525;
   --secondary-font-color: #c59d5f;
@@ -117,24 +114,27 @@ li {
   transform: rotate(-450deg) translateX(-0.8rem);
 }
 .landing-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 100px;
   color: var(--white-color);
   font-family: var(--main-font);
-  font-size: 7rem;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to left, #ffe838, #fd57bf);
+  font-size: 4rem;
+  color: white;
+  font-weight: 400;
+}
+.landing-text h2{
+  font-size: 5rem;
 }
 .landing-work {
   font-size: 3rem;
   text-align: center;
   color: var(--white-color);
 }
-
+.landing-text .infor{
+  font-size: 20px;
+  max-width: 1200px;
+  margin: 80px auto;
+}
 /* style project */
 .project {
   display: grid;
@@ -146,32 +146,34 @@ li {
   position: relative;
   margin: 30px 0;
   padding: 20px;
+  text-align: center;
 }
 .project-name {
   font-family: var(--main-font);
-  font-size: 35px;
+  font-size: 25px;
   /* position: absolute;
   top: -50px;
   left: 0; */
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to right, #ffe838, #fd57bf);
+  color: white;
 }
 .project-item img {
-  width: 800px;
-  height: 400px;
+  width: 1000px;
+  height: 500px;
   object-fit: fill;
   border-radius: 8px;
+  margin: 0 auto;
 }
 .project3 img {
   object-fit: contain;
 }
-.project2,
+.project-title {
+  font-size: 40px;
+}
+/* .project2,
 .project4,
 .project6 {
   margin-left: auto;
-}
+} */
 .close {
   font-size: 35px;
   color: var(--white-color);
@@ -192,12 +194,11 @@ li {
 }
 
 /* STYLE ABOUT */
-.about {
+.about-content {
   color: var(--white-color);
   text-align: center;
   margin-bottom: 30px;
   display: flex;
-
   padding: 0 30px;
   justify-content: space-between;
 }
@@ -211,10 +212,22 @@ li {
 .about-item {
   display: flex;
   flex-direction: column;
-  
-  
 }
+.about-skill {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 50px;
+}
+.about-skill-details {
+  align-items: center;
+  justify-content: center;
 
+  display: flex;
+  column-gap: 50px;
+  font-size: 25px;
+  margin: 30px auto;
+}
 
 .about-name {
   font-family: var(--main-font);
@@ -230,10 +243,7 @@ li {
   font-family: "Poppins", sans-serif;
 }
 .about-skill h2 {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to right, #ffe838, #fd57bf);
+  color: white;
   margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -245,11 +255,7 @@ li {
   font-size: 30px;
   border: 1px solid transparent;
   padding: 5px;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to right, #ffe838, #fd57bf);
-  
+  color: white;
 }
 
 /* reposive */
@@ -262,7 +268,7 @@ li {
   .landing-work {
     font-size: 30px;
   }
-  .about{
+  .about {
     flex-direction: column;
   }
 }
@@ -290,7 +296,7 @@ li {
   .linkproject {
     font-size: 25px;
   }
-  .project-item img{
+  .project-item img {
     object-fit: cover;
     height: auto;
   }
